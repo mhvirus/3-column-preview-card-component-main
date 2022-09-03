@@ -1,0 +1,128 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --ff-100: 'Lexend Deca', sans-serif;
+    --ff-200: 'Big Shoulders Display', cursive;
+    --clr-Bright-orange: hsl(31, 77%, 52%);
+    --clr-Dark-cyan: hsl(184, 100%, 22%);
+    --clr-Very-dark-cyan: hsl(179, 100%, 13%);
+    --clr-white: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+    --clr-light-gray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--ff-100);
+    font-size: 0.9375rem;
+    background-color: var(--clr-light-gray);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    color: var(--clr-white);
+    max-width: 23em;
+    min-height: 25em;
+    padding-block: 3em;
+    padding-inline: 2.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;    
+}
+
+.card-img {
+    width: 100%;
+    display: block;
+    width: 4rem;
+}
+
+.card-heading {
+    font-family: var(--ff-200);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.card-para {
+    max-width: 25ch;
+    line-height: 1.7;
+    opacity: 0.8;
+}
+
+.card-btn {
+    cursor: pointer;
+    background-color: var(--clr-light-gray);
+    border: 2px solid var(--clr-light-gray);
+    width: 9em;
+    padding: .8em .8em;
+    border-radius: 100vw;
+    text-transform: capitalize;
+    font-size: 1rem;
+    transition: all .2s ease-in-out;
+}
+
+.card-btn:hover,
+.card-btn:focus,
+.card-btn:active {
+    color: white;
+    background-color: transparent;
+}
+
+.card-1{
+    background-color: var(--clr-Bright-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-2{
+    background-color: var(--clr-Dark-cyan);
+}
+
+.card-3{
+    background-color: var(--clr-Very-dark-cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+@media (min-width: 50em) {
+    main {
+        margin-top: 10em;
+    }
+    .card-container {
+        flex-direction: row;
+    }
+
+    .card-1{
+        border-radius:0.5rem 0 0 0.5rem ;
+    }
+
+    .card-3{
+        border-radius:0 0.5rem 0.5rem  0;
+    }
+}
+
+.very-dark-cyan {
+    color: var(--clr-Very-dark-cyan);
+}
+
+.dark-cyan {
+    color: var(--clr-Dark-cyan);
+}
+
+.orange {
+    color: var(--clr-Bright-orange);
+}
